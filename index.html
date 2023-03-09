@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="Asset 1.png">
+  <title>FourSeasons</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="top-left">Winter</div>
+    <div id="top-right">Spring</div>
+    <div id="bottom-left">Summer</div>
+    <div id="bottom-right">Autumn</div>
+  </div>
+
+
+  <script>
+
+    //PSEUDO CODE
+    //Mouse over Winter Div
+    //Change to winter image
+    //Mouse out of winter Div,
+    //Replace image of winter by original div.
+    //Repeat same steps for Spring, Summer, and Fall Divs.
+
+    //winter image
+    let winter = document.querySelector('#top-left');
+    let winterImage = document.createElement('img');
+    winterImage.src = 'michael-winter-unsplash.jpg';
+    winterImage.alt = 'winter';
+
+    winter.addEventListener('mouseover', function () {
+      winterImage.style.display = 'block';
+      winter.appendChild(winterImage);
+    });
+
+    winter.addEventListener('mouseout', function () {
+      winterImage.style.display = 'none';
+      winter.textContent = 'Winter';
+    });
+
+    //spring image
+    let spring = document.querySelector('#top-right');
+    let springImage = document.createElement('img');
+    springImage.src = 'kouji-spring-unsplash.jpg';
+    springImage.alt = 'spring';
+
+
+    spring.addEventListener('mouseover', function () {
+      springImage.style.display = 'block';
+      spring.appendChild(springImage);
+    });
+
+    spring.addEventListener('mouseout', function () {
+      springImage.style.display = 'none';
+      spring.textContent = 'Spring';
+    });
+
+    //summer image
+    let summer = document.querySelector('#bottom-left');
+    let summerImage = document.createElement('img');
+    summerImage.src = 'marek-unsplash.jpg';
+    summerImage.alt = 'summer';
+
+
+    summer.addEventListener('mouseover', function () {
+      summerImage.style.display = 'block';
+      summer.appendChild(summerImage);
+    });
+
+    summer.addEventListener('mouseout', function () {
+      summerImage.style.display = 'none';
+    });
+
+    //autumn image
+    let autumn = document.querySelector('#bottom-right');
+    let autumnImage = document.createElement('img');
+    autumnImage.src = 'solomon-unsplash.jpg';
+    autumnImage.alt = 'autumn';
+
+
+    autumn.addEventListener('mouseover', function () {
+      autumnImage.style.display = 'block';
+      autumn.appendChild(autumnImage);
+    });
+
+    autumn.addEventListener('mouseout', function () {
+      autumnImage.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
